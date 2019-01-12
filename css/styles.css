@@ -1,0 +1,40 @@
+ body {
+     box-sizing: border-box; /*es una propiedad CSS para cambiar el modelo de caja por defecto de los navegadores*/
+     /*Con border-box, hacemos que el ancho especificado sea el equivalente al ancho total. Es decir*/
+     /*no afecte el ancho de nuestros elementos*/
+     background-color: #f2f2f2;
+ }
+
+ .contenedor{
+     max-width: 1100px;
+     margin: 0 auto;
+ }
+
+ h2{
+     /*Coloca el titulo en la parte superior*/
+     flex: 0 1 100%;
+ }
+ img{
+     /*Hace las imagenes responsivas*/
+     max-width: 100%;
+ }
+
+ @media screen and (min-width: 480px){
+    .contenido-principal{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .entrada{
+        flex: 0 1 calc(50% - 1rem);
+    }
+ }
+
+
+ @media screen and (min-width: 800px){
+
+    .entrada{
+        flex: 0 1 calc(33% - 1rem);
+    }
+ }
